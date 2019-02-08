@@ -1,7 +1,8 @@
-FROM ruby
+FROM ruby:2.5
 
 RUN apt-get update -qq && apt-get install -y build-essential libpq-dev nodejs \
-    locales task-japanese # for locale
+    locales task-japanese sqlite3 libsqlite3-dev
+# locales task-japanese # for locale
 
 RUN mkdir /myapp
 WORKDIR /myapp
