@@ -2,7 +2,8 @@ FROM ruby:2.6.5
 
 ENV APP_HOME /app
 
-RUN apt-get update -qq && apt-get install -y nodejs postgresql-client
+RUN apt-get update -qq \
+  && apt-get install -y nodejs postgresql-client --no-install-recommends
 RUN mkdir $APP_HOME
 WORKDIR $APP_HOME
 
