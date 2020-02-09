@@ -35,22 +35,7 @@ production:
   database: production
 ```
 
-Save code in container after deleting the existing image
-
-```bash
-$ docker rmi ruby_web
-$ docker-compose build
-```
-
-to avoid to be a none image
-
-```bash
-REPOSITORY               TAG                 IMAGE ID            CREATED             SIZE
-ruby_web                 latest              8059627517a8        19 seconds ago      1.02GB
-<none>                   <none>              4dfa30db4f0d        4 minutes ago       984MB
-```
-
-Build again
+Save code in container
 
 
 ```bash
@@ -62,6 +47,14 @@ Run and prepare db
 ```bash
 $ docker-compose up
 $ docker-compose run --rm web rails db:create
+```
+
+Remove the old image, the old one name is none
+
+```bash
+REPOSITORY               TAG                 IMAGE ID            CREATED             SIZE
+ruby_web                 latest              8059627517a8        19 seconds ago      1.02GB
+<none>                   <none>              4dfa30db4f0d        4 minutes ago       984MB
 ```
 
 if you want to run rails db:migrate
