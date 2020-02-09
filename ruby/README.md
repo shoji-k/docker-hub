@@ -1,6 +1,6 @@
 ## start new project
 
-Create new Rails code
+Create new Rails code, this also creates .git
 
 ```bash
 $ docker-compose run --rm web rails new . --force --no-deps --database=postgresql --api
