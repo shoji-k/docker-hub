@@ -76,3 +76,19 @@ if you clean all
 ```bash
 $ docker-compose down -v
 ```
+
+## start when rails codes are ready
+
+copy files here except for README.md, Gemfile and Gemfile.lock.  
+And improve .dockerignore for your project.  
+Then build.
+
+```bash
+$ docker-compose build
+```
+
+Run
+
+```bash
+$ docker-compose up
+```
